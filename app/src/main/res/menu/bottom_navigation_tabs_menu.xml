@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@id/first_aid"
+        android:icon="@drawable/ic_first_aid"
+        android:title="Первая помощь"/>
+    <item android:id="@id/repair"
+        android:icon="@drawable/ic_repair"
+        android:title="Ремонт"/>
+    <item android:id="@id/manager"
+        android:icon="@drawable/ic_manager"
+        android:title="Расходы"/>
+
+</menu>
