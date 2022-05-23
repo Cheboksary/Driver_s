@@ -21,6 +21,7 @@ class AidListAdapter(
         val binding = p1?.tag as FirstAidListItemBinding? ?: createBinding(p2.context)
         val firstAidType = getItem(position)
         binding.firstAidItemName.text = firstAidType.name
+        binding.firstAidItemImage.setImageResource(firstAidType.pic)
 
         return binding.root
     }

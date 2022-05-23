@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_tabsFragment_to_bleedingAidFragment"
             app:destination="@id/bleedingAidFragment" />
+        <action
+            android:id="@+id/action_tabsFragment_to_wheelRepairFragment"
+            app:destination="@id/wheelRepairFragment" />
     </fragment>
     <fragment
         android:id="@+id/bleedingAidFragment"
         android:name="com.example.driverhelper.screens.firstaid.BleedingAidFragment"
         android:label="fragment_bleeding_aid"
         tools:layout="@layout/fragment_bleeding_aid" />
+    <fragment
+        android:id="@+id/wheelRepairFragment"
+        android:name="com.example.driverhelper.screens.repair.WheelRepairFragment"
+        android:label="fragment_wheel_repair"
+        tools:layout="@layout/fragment_wheel_repair" />
 </navigation>

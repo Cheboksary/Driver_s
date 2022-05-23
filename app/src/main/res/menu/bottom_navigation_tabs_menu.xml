@@ -6,7 +6,7 @@
         android:title="Первая помощь"/>
     <item android:id="@id/repair"
         android:icon="@drawable/ic_repair"
-        android:title="Ремонт"/>
+        android:title="Обслуживание"/>
     <item android:id="@id/manager"
         android:icon="@drawable/ic_manager"
         android:title="Расходы"/>

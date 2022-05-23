@@ -4,27 +4,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".screens.repair.RepairFragment">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/repairTextView"
+    <ImageView
+        android:id="@+id/firstAidItemImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ремонт и обслуживание"
-        android:textSize="18sp"
         android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/repairListView"/>
-    <ListView
-        android:id="@+id/repairListView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        tools:listitem="@layout/repair_list_item"
+        android:src="@drawable/test_image_repair"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/firstAidItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/firstAidItemImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/repairTextView" />
+        tools:text="Ремонт или обслуживание" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
