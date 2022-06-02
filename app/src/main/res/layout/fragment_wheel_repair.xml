@@ -76,4 +76,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/numberThree" />
 
+    <TextView
+        android:id="@+id/numberFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="42sp"
+        android:textColor="@color/blue"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textThree" />
+
+    <TextView
+        android:id="@+id/textFour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Установите домкрат. Для этого на днище есть небольшие усиленные места, которые обычно находятся позади переднего колеса или сразу перед задним. Обязательно следите, чтобы домкрат поднимался ровно, не кренился."
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/numberThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/numberFour" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

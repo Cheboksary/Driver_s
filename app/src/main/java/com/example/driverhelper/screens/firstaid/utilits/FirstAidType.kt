@@ -14,5 +14,5 @@ val firstAidList = listOf<FirstAidType>(
     FirstAidType(id = 2, name = "Потеря сознания", R.drawable.test_image),
     FirstAidType(id = 3, name = "Отравление", R.drawable.test_image),
     FirstAidType(id = 4, name = "Перелом", R.drawable.test_image),
-    FirstAidType(id = 5, name = "Человек подавился", com.google.android.material.R.drawable.ic_clock_black_24dp),
+    FirstAidType(id = 5, name = "Человек подавился", R.drawable.test_image),
 )

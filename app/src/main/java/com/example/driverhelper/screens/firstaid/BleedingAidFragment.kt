@@ -24,7 +24,7 @@ class BleedingAidFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.call112btn.setOnClickListener {
-
+            //todo
         }
     }
 }
