@@ -16,6 +16,18 @@
         <action
             android:id="@+id/action_tabsFragment_to_wheelRepairFragment"
             app:destination="@id/wheelRepairFragment" />
+        <action
+            android:id="@+id/action_tabsFragment_to_expensesHistoryFragment"
+            app:destination="@id/expensesHistoryFragment" />
+        <action
+            android:id="@+id/action_tabsFragment_to_addExpensesFragment"
+            app:destination="@id/addExpensesFragment" />
+        <action
+            android:id="@+id/action_tabsFragment_to_maintenanceHistoryFragment"
+            app:destination="@id/maintenanceHistoryFragment" />
+        <action
+            android:id="@+id/action_tabsFragment_to_addMaintenanceFragment"
+            app:destination="@id/addMaintenanceFragment" />
     </fragment>
     <fragment
         android:id="@+id/bleedingAidFragment"
@@ -27,4 +39,24 @@
         android:name="com.example.driverhelper.screens.repair.WheelRepairFragment"
         android:label="fragment_wheel_repair"
         tools:layout="@layout/fragment_wheel_repair" />
+    <fragment
+        android:id="@+id/expensesHistoryFragment"
+        android:name="com.example.driverhelper.screens.manager.expenses.screens.ExpensesHistoryFragment"
+        android:label="fragment_expenses_history"
+        tools:layout="@layout/fragment_expenses_history" />
+    <fragment
+        android:id="@+id/addExpensesFragment"
+        android:name="com.example.driverhelper.screens.manager.expenses.screens.AddExpensesFragment"
+        android:label="fragment_add_expenses"
+        tools:layout="@layout/fragment_add_expenses" />
+    <fragment
+        android:id="@+id/addMaintenanceFragment"
+        android:name="com.example.driverhelper.screens.manager.maintenance.screens.AddMaintenanceFragment"
+        android:label="fragment_add_maintenance"
+        tools:layout="@layout/fragment_add_maintenance" />
+    <fragment
+        android:id="@+id/maintenanceHistoryFragment"
+        android:name="com.example.driverhelper.screens.manager.maintenance.screens.MaintenanceHistoryFragment"
+        android:label="fragment_maintenance_history"
+        tools:layout="@layout/fragment_maintenance_history" />
 </navigation>
