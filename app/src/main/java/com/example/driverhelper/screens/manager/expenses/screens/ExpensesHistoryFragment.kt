@@ -39,6 +39,7 @@ class ExpensesHistoryFragment : Fragment() {
 
     private fun initialization() {
         adapter = AllTimeExpensesAdapter()
+        recyclerView = binding.allTimeExpensesRecyclerView
         recyclerView.adapter = adapter
         observer = Observer { it ->
             val list = it.sortedBy{ it.yearFromUser }.sortedBy{ it.monthFromUser }.sortedBy{ it.dayFromUser }

@@ -54,7 +54,9 @@ class ManagerFragment : Fragment() {
         observer = Observer { it ->
             val list = it.sortedBy{ it.dayFromUser }
             adapter.setList(list)
-            binding.noMonthExpensesTextView.visibility = View.GONE
+            if (list.isNotEmpty()) {
+                binding.noMonthExpensesTextView.visibility = View.GONE
+            }
         }
         viewModel.list.observe(viewLifecycleOwner,observer)
         binding.addExpensesButton.setOnClickListener {
