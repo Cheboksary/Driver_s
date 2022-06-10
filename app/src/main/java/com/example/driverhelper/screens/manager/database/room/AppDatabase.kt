@@ -18,7 +18,7 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun getManagerRoomDao(): ManagerRoomDao
 
-    companion object {
+    /*companion object {
 
         @Volatile
         private var database: AppDatabase? = null
@@ -33,5 +33,5 @@ abstract class AppDatabase : RoomDatabase() {
                 .build()
             return database as AppDatabase
         }
-    }
+    }*/
 }

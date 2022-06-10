@@ -12,9 +12,9 @@ class ManagerRoomRepository(
     override val expensesList: LiveData<List<Expenses>>
         get() = managerRoomDao.getAllExpenses()
 
-    override suspend fun getExpensesByMonth(month: String, year: String): LiveData<List<Expenses>>? {
+    /*override suspend fun getExpensesByMonth(month: String, year: String): LiveData<List<Expenses>>? {
         return managerRoomDao.getExpensesByMonth(month, year)
-    }
+    }*/
 
     override suspend fun insertExpenses(expenses: Expenses) {
         managerRoomDao.insertExpenses(expenses)

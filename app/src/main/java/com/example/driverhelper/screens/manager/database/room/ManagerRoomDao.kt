@@ -12,8 +12,8 @@ interface ManagerRoomDao {
     @Query("SELECT * from expenses_table")
     fun getAllExpenses(): LiveData<List<Expenses>>
 
-    @Query("SELECT * from expenses_table WHERE year_from_user = :year AND month_from_user = :month")
-    suspend fun getExpensesByMonth(month: String, year: String): LiveData<List<Expenses>>?
+    /*@Query("SELECT * from expenses_table WHERE year_from_user = :year AND month_from_user = :month")
+    suspend fun getExpensesByMonth(month: String, year: String): LiveData<List<Expenses>>?*/
 
     @Insert
     suspend fun insertExpenses(expenses: Expenses)

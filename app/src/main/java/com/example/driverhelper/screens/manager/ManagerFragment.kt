@@ -9,17 +9,19 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.driverhelper.R
+import com.example.driverhelper.Repository
 import com.example.driverhelper.databinding.FragmentManagerBinding
 import com.example.driverhelper.screens.firstaid.utilits.findTopNavController
 import com.example.driverhelper.screens.manager.expenses.utilits.Expenses
 import com.example.driverhelper.screens.manager.expenses.utilits.ExpensesAdapter
+import com.example.driverhelper.screens.viewModelCreator
 import java.text.SimpleDateFormat
 import java.util.*
 
 class ManagerFragment : Fragment() {
 
     lateinit var binding: FragmentManagerBinding
-    lateinit var viewModel: ManagerFragmentViewModel
+    private val viewModel by viewModelCreator {ManagerFragmentViewModel(Repository.databaseRepository)}
     private lateinit var adapter: ExpensesAdapter
     private lateinit var monthExpensesRecyclerView: RecyclerView
     lateinit var observer: Observer<List<Expenses>>
@@ -43,8 +45,8 @@ class ManagerFragment : Fragment() {
         val yearFormat = SimpleDateFormat("yyyy", Locale.getDefault())
         val currentYear = yearFormat.format(Calendar.getInstance().time)
 
-        viewModel = ViewModelProvider(this)[ManagerFragmentViewModel::class.java]
-        viewModel.initDatabase()
+        //viewModel = ViewModelProvider(this)[ManagerFragmentViewModel::class.java]
+        //viewModel.initDatabase()
 
         adapter = ExpensesAdapter(currentMonth, currentYear)
         monthExpensesRecyclerView = binding.monthExpensesRecyclerView
