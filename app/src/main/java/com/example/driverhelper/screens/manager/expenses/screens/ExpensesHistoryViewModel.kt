@@ -1,9 +1,12 @@
 package com.example.driverhelper.screens.manager.expenses.screens
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import com.example.driverhelper.screens.manager.REPOSITORY
+import androidx.lifecycle.ViewModel
+import com.example.driverhelper.screens.manager.database.DatabaseRepository
 
-class ExpensesHistoryViewModel(application: Application): AndroidViewModel(application) {
-    val list = REPOSITORY.expensesList
+class ExpensesHistoryViewModel(
+    private val databaseRepository: DatabaseRepository
+): ViewModel() {
+
+    val list = databaseRepository.expensesList
+
 }

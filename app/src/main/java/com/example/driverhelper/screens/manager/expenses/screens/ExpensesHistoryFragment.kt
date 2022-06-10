@@ -10,14 +10,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.recyclerview.widget.RecyclerView
 import com.example.driverhelper.R
+import com.example.driverhelper.Repository
 import com.example.driverhelper.databinding.FragmentExpensesHistoryBinding
 import com.example.driverhelper.screens.manager.expenses.utilits.AllTimeExpensesAdapter
 import com.example.driverhelper.screens.manager.expenses.utilits.Expenses
+import com.example.driverhelper.screens.viewModelCreator
 
 class ExpensesHistoryFragment : Fragment() {
 
     lateinit var binding: FragmentExpensesHistoryBinding
-    lateinit var viewModel: ExpensesHistoryViewModel
+    private val viewModel by viewModelCreator { ExpensesHistoryViewModel(Repository.databaseRepository) }
     lateinit var observer: Observer<List<Expenses>>
     lateinit var adapter: AllTimeExpensesAdapter
     lateinit var recyclerView: RecyclerView
@@ -36,7 +38,6 @@ class ExpensesHistoryFragment : Fragment() {
     }
 
     private fun initialization() {
-        viewModel = ViewModelProvider(this)[ExpensesHistoryViewModel::class.java]
         adapter = AllTimeExpensesAdapter()
         recyclerView.adapter = adapter
         observer = Observer { it ->
