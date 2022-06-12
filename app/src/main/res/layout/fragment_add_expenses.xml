@@ -91,6 +91,7 @@
         android:hint="дд.мм.гггг"
         android:layout_margin="4dp"
         android:textSize="20sp"
+        android:hint="дд.мм.гггг"
         android:inputType="date"
         android:minHeight="48dp"
         android:imeOptions="actionNext"

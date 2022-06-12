@@ -1,4 +1,4 @@
-plugins {
+ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 
@@ -44,6 +44,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.room:room-common:2.4.2'
     def nav_version = "2.4.2"
 
     // Java language implementation
